@@ -7,3 +7,5 @@
 # 1.JavaScript
 
 > [변수와 상수](/JavaScript/변수와상수.md)
+
+> [자료형](/JavaScript/자료형.md)
