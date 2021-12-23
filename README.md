@@ -15,3 +15,5 @@
 > [연산자](/JavaScript/연산자.md)
 
 > [nullish](/JavaScript/nullish.md)
+
+> [switch](/JavaScript/switch.md)
