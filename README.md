@@ -19,3 +19,5 @@
 > [switch](/JavaScript/switch.md)
 
 > [함수](/JavaScript/함수.md)
+
+> [화살표함수](/JavaScript/화살표함수.md)
