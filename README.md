@@ -17,3 +17,5 @@
 > [nullish](/JavaScript/nullish.md)
 
 > [switch](/JavaScript/switch.md)
+
+> [함수](/JavaScript/함수.md)
