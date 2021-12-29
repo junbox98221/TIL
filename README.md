@@ -23,3 +23,5 @@
 > [화살표함수](/JavaScript/화살표함수.md)
 
 > [객체](/JavaScript/객체.md)
+
+> [가비지컬렉션](/JavaScript/가비지컬렉션.md)
