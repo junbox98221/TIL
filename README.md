@@ -25,3 +25,5 @@
 > [객체](/JavaScript/객체.md)
 
 > [가비지컬렉션](/JavaScript/가비지컬렉션.md)
+
+> [메서드와 this](/JavaScript/메서드&this.md)
