@@ -31,3 +31,5 @@
 > [new와 생성자함수](/JavaScript/new&생성자.md)
 
 > [옵셔널체이닝](/JavaScript/옵셔널체이닝.md)
+
+> [심볼](/JavaScript/심볼.md)
