@@ -33,3 +33,7 @@
 > [옵셔널체이닝](/JavaScript/옵셔널체이닝.md)
 
 > [심볼](/JavaScript/심볼.md)
+
+> [원시값메서드](/JavaScript/원시값메서드.md)
+
+> [숫자형](/JavaScript/숫자형.md)
