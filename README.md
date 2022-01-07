@@ -37,3 +37,5 @@
 > [원시값메서드](/JavaScript/원시값메서드.md)
 
 > [숫자형](/JavaScript/숫자형.md)
+
+> [배열](/JavaScript/배열.md)
