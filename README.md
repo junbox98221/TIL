@@ -43,3 +43,5 @@
 > [iterable](/JavaScript/iterable.md)
 
 > [맵과 셋](/JavaScript/맵과셋.md)
+
+> [위크맵과 위크셋](/JavaScript/위크맵과위크셋.md)
