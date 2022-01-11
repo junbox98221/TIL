@@ -47,3 +47,7 @@
 > [위크맵과 위크셋](/JavaScript/위크맵과위크셋.md)
 
 > [구조분해할당](/JavaScript/구조분해할당.md)
+
+> [실행컨텍스트](/JavaScript/실행컨텍스트.md)
+
+> [매개변수&스프레드](/JavaScript/매개변수&스프레드.md)
