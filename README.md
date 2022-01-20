@@ -57,3 +57,5 @@
 > [call/apply&데코레이터,포워딩](/JavaScript/call/apply&데코레이터,포워딩.md)
 
 > [함수바인딩](/JavaScript/함수바인딩.md)
+
+> [프로토타입상속](/JavaScript/프로토타입상속.md)
