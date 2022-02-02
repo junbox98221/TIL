@@ -59,3 +59,7 @@
 > [함수바인딩](/JavaScript/함수바인딩.md)
 
 > [프로토타입상속](/JavaScript/프로토타입상속.md)
+
+# 2. 브라우저
+
+> [defer,async스크립트](/브라우저/defer,async스크립트.md)
