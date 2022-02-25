@@ -10,3 +10,11 @@ x = (a !== null && a !== undefined) ? a : b;
 ```
 
 두 코드는 같은 동작을 한다. a가 null 이거나 undefined가 아니라면 x에 a가 대입되고 그 외에는 b가 대입된다.
+
+null 병합 연산자(nullish)는 변수의 기본값 설정을 할때도 유용하다.
+
+어떤 변수를 default string으로 초기화 하고자 할 때를 예를 들자면 아래와 같다.
+
+```js
+x = "" ?? "DEFAULT_STRING";
+```
