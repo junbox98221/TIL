@@ -66,6 +66,8 @@
 
 > [스코프](/JavaScript/스코프.md)
 
+> [프로퍼티어트리뷰트](/JavaScript/프로퍼티어트리뷰트.md)
+
 # 2. 브라우저
 
 > [defer,async스크립트](/브라우저/defer,async스크립트.md)
