@@ -68,6 +68,8 @@
 
 > [프로퍼티어트리뷰트](/JavaScript/프로퍼티어트리뷰트.md)
 
+> [함수와일급객체](/JavaScript/함수와일급객체.md)
+
 # 2. 브라우저
 
 > [defer,async스크립트](/브라우저/defer,async스크립트.md)
