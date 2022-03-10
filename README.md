@@ -58,7 +58,7 @@
 
 > [함수바인딩](/JavaScript/함수바인딩.md)
 
-> [프로토타입상속](/JavaScript/프로토타입상속.md)
+> [프로토타입](/JavaScript/프로토타입.md)
 
 > [strict](/JavaScript/strict.md)
 
