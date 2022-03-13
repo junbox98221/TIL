@@ -70,6 +70,8 @@
 
 > [함수와일급객체](/JavaScript/함수와일급객체.md)
 
+> [빌트인객체](/JavaScript/빌트인객체.md)
+
 # 2. 브라우저
 
 > [defer,async스크립트](/브라우저/defer,async스크립트.md)
