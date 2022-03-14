@@ -1,6 +1,6 @@
 # 메서드와 this
 
-> 출처 [모던 JavaScript 튜토리얼](https://ko.javascript.info/)을 보고 정리한 내용입니다.
+> 출처 [모던 JavaScript 튜토리얼](https://ko.javascript.info/),Modern JavaScript DeepDive를 보고 정리한 내용입니다.
 
 객체의 프로퍼티에 함수를 할당할 수 있는데 할당된 함수는 메서드라고 한다.
 
@@ -36,7 +36,7 @@ let user = {
 user.sayHi(); // John
 ```
 
-이렇게 this 를 사용하지 않고 외부 변수를 참조해 객체의 정보에 접근할 수 있지만 외부 변수가 변하면 에러가 발생할 수 있다.
+객체 리터럴로 생성한 경우 이렇게 this 를 사용하지 않고 외부 변수를 참조해 객체의 정보에 접근할 수 있지만 외부 변수가 변하면 에러가 발생할 수 있다.
 
 아래 예시를 보면 user 변수를 복사해 admin에 할당했다. (얕은 복사, 참조값 할당)
 
@@ -44,17 +44,17 @@ user.sayHi(); // John
 
 그리고 외부변수로 sayHi() 메서드에서 객체 내 정보에 접근해서 에러가 발생하게 된 상황이다.
 
-```
+```js
 let user = {
-  name: "John",
-  age: 30,
+    name: "John",
+    age: 30,
 
-  sayHi() {
-    alert( user.name ); // Error: Cannot read property 'name' of null
-  }
-
+    sayHi() {
+        alert(user.name); // Error: Cannot read property 'name' of null
+        //에러를 발생시키는 방식
+        alert(this.name); //this 사용 권장
+    },
 };
-
 
 let admin = user;
 user = null; // user를 null로 덮어씁니다.
@@ -62,64 +62,59 @@ user = null; // user를 null로 덮어씁니다.
 admin.sayHi(); // sayHi()가 엉뚱한 객체를 참고하면서 에러가 발생했습니다.
 ```
 
-this의 대상, 값은 런타임에 결정된다.
+this 바인딩은 함수 호출 방식, 함수가 어떻게 호출되었는지에 따라 동적으로 결정된다.
 
 아래에서 같은 f 라는 메서드를 실행하는데 sayHi함수에서 this.name은 각각 user 와 admin 이다.
 
-```
+```js
 let user = { name: "John" };
 let admin = { name: "Admin" };
 
 function sayHi() {
-  alert( this.name );
+    alert(this.name);
 }
 
-// 별개의 객체에서 동일한 함수를 사용함
+// 서로 다른 객체에 메서드를 추가
 user.f = sayHi;
 admin.f = sayHi;
 
-// 'this'는 '점(.) 앞의' 객체를 참조하기 때문에
-// this 값이 달라짐
+// 메서드 내부에서 this는 메서드를 호출한 객체를 가르킨다.
 user.f(); // John  (this == user)
 admin.f(); // Admin  (this == admin)
-
-admin['f'](); // Admin (점과 대괄호는 동일하게 동작함)
 ```
 
-화살표함수는 일반 함수와 다르게 '고유한' this를 가지지 않는다.
+아래는 프로토타입과 관련된 this 바인딩의 예시이다.
 
-화살표 함수에서 this는 외부 함수에서 this값을 가져온다.
+```js
+function Person(name) {
+    this.name = name;
+}
 
-우선 아래 예시를 각각 실행해보자.
-
-```
-let user = {
-  firstName: "보라",
-  sayHi: () => alert(this.firstName)
+Person.prototype.getName = function () {
+    return this.name;
 };
 
-user.sayHi(); // undefined
+const me = new Person("Lee");
+console.log(me.getName()); // getName 메서드를 호출한 객체, 인스턴스는 me 이다. 따라서 name 은 Lee 이다.
 
-let user = {
-  firstName: "보라",
-  sayHi: function(){ alert(this.firstName)}
-};
-
-user.sayHi(); // 보라
+Person.prototype.name = "Kim";
+console.log(Person.prototype.getName()); //Person.prototype 또한 하나의 객체로 여기서 getName는 Kim을 호출한다.
 ```
 
-화살표함수로 만든 첫번째 sayHi()는 undefined를 출력하지만 일반 함수형식의 2번째 sayHi는 user 객체의 firstName의 프로퍼티에 접근가능하다.
+생성자 함수 내부의 this는 생성자 함수가 미래에 생성할 인스턴스를 가르킨다.
 
-아래 화살표 함수로 만든 arrow함수는 외부 변수인 user 에 접근한다.
+```js
+function Circle(radius) {
+    this.radius = radius;
+    this.getDiameter = function () {
+        return 2 * this.radius;
+    };
+}
 
-```
-let user = {
-  firstName: "보라",
-  sayHi() {
-    let arrow = () => alert(this.firstName);
-    arrow();
-  }
-};
+const circle1 = new Circle(5);
 
-user.sayHi(); // 보라
+const circle2 = new Circle(10);
+
+console.log(circle1.getDiamter()); //10
+console.log(circle2.getDiamter()); //20
 ```
