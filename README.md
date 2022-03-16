@@ -52,7 +52,7 @@
 
 > [매개변수&스프레드](/JavaScript/매개변수&스프레드.md)
 
-> [변수유효범위&클로저](/JavaScript/변수유효범위&클로저.md)
+> [렉시컬환경](/JavaScript/렉시컬환경.md)
 
 > [call/apply&데코레이터,포워딩](/JavaScript/call/apply&데코레이터,포워딩.md)
 
