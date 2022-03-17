@@ -72,6 +72,8 @@
 
 > [빌트인객체](/JavaScript/빌트인객체.md)
 
+> [클로저](/JavaScript/클로저.md)
+
 # 2. 브라우저
 
 > [defer,async스크립트](/브라우저/defer,async스크립트.md)
