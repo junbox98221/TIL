@@ -74,6 +74,8 @@
 
 > [클로저](/JavaScript/클로저.md)
 
+> [클래스](/JavaScript/클래스.md)
+
 # 2. 브라우저
 
 > [defer,async스크립트](/브라우저/defer,async스크립트.md)
