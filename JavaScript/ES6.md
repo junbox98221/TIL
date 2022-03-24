@@ -96,6 +96,71 @@ const Foo = () => {};
 new Foo(); // TypeError Foo is not a constructor
 ```
 
-화살표 함수는 함수 자체의 this, arguments, super, new.target 바인딩을 갖지 않는다.
+```js
+class Prefixer {
+    consructor(prefix) {
+        this.prefix = prefix;
+    }
 
-만약 화살표 함수 내부에서 this, arguments, super, new.target를 참조하면 스코프 체인을 통해 상위 스코프의 this, arguments, super, new.target를 참조한다.
+    add(arr) {
+        return arr.map(function (item) {
+            return this.prefix + item;
+        });
+    }
+}
+const prefixer = new Prefixer("-webkit-");
+console.log(prefixer.add(["transition", "user-select"])); //VM21:8 Uncaught TypeError: Cannot read properties of undefined (reading 'prefix')
+```
+
+위 예제를 실행했을 때 기대하는 결과는 ['-webkit-transition','-webkit-user-select']이다.
+
+에러가 발생하는 이유는 map 함수의 인수로 전달한 콜백 함수 내부의 this는 undefined를 가르킨다.
+이는 Array.prototype.map 메서드가 콜백 함수를 일반 함수로서 호출하기 때문이다.
+
+22장 'this'에서 살펴 보았듯이 일반 함수로서 호출될 때 this는 전역 객체를 가리킨다.
+
+그런데 class 내부에서는 암묵적으로 strict mode이기 때문에 일반 함수 내부에서 this는 undefined가 바인딩된다.
+
+```js
+class Prefixer {
+    consructor(prefix) {
+        this.prefix = prefix;
+    }
+
+    add(arr) {
+        // es6이후에는 화살표 함수를 사용해 콜백 함수 내부 this문제를 해결한다.
+        return arr.map((item) => {
+            return this.prefix + item;
+        });
+    }
+}
+```
+
+위 예제에서 봤듯이 화살표 함수를 제외한 모든 함수와 다르게 화살표함수는 내부의 this 바인딩이 존재하지 않는다.
+따라서 화살표함수는 내부에서 this를 참조하면 일반 식별자처럼 스코프 체인을 통해 상위 스코프에서 this를 탐색한다.
+
+```js
+const person = {
+    name: "Lee",
+    sayHi: () => console.log(`Hi ${this.name}`),
+};
+
+person.sayHi(); // Hi
+```
+
+위 예시에서 객체 안에 메서드(es6에서 의미의 메서드가 아닌 일반적인 의미의 메서드)를 화살표 함수로 정의하면 this는 메서드를 호출한 객체인 person이 아닌 상위 스코프인 전역의 this를 가르킨다.
+
+따라서 메서드는 메서드 축약 표현으로 작성하자.
+
+```js
+const person = {
+    name: "Lee",
+    sayHi: () => console.log(`Hi ${this.name}`),
+};
+
+person.sayHi(); // Hi
+```
+
+this와 마찬가지로 화살표 함수는 super,arguments 바인딩을 갖지 않고 내부에서 참조하면 상위 스코프를 탐색한다.
+
+## Rest 파라미터
