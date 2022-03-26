@@ -76,7 +76,9 @@
 
 > [클래스](/JavaScript/클래스.md)
 
-> [es6](/JavaScript/es6.md)
+> [ES6](/JavaScript/ES6.md)
+
+> [배열](/JavaScript/배열.md)
 
 # 2. 브라우저
 
