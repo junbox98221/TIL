@@ -12,7 +12,7 @@ src 속성이 있는 <script src="..."></script> 태그의 경우에도 마찬�
 
 -   스크립트에서 스크립트 아래에 있는 DOM요소에 접근할 수 없다. 따라서 DOM 요소에 핸들러를 추가하는 것과 같은 행위가 불가하다. ex)
 
-```
+```html
 <p>...스크립트 앞 콘텐츠...</p>
 
 <script src="https://javascript.info/article/script-async-defer/long.js?speed=1"></script>
@@ -30,3 +30,7 @@ src 속성이 있는 <script src="..."></script> 태그의 경우에도 마찬�
 ## async
 
 asnyc속성이 붙은 스크립트는 페이지와 독립적으로 동작하고 defer와 마찬가지로 백그라운드에서 다운로드된다. 따라서 HTML 페이지는 async 스크립트 다운이 완료되길 기다리지 않고 페이지 내 콘텐츠를 처리, 출력한다.(하지만 asny 스크립트 실행 중에는 파싱이 멈춘다.)
+
+HTML 파싱과 자바스크립트 파일의 로드가 비동기적으로 동시에 진행된다.
+
+단, 자바스크립트 파일의 로드가 완료되면 HTML 파싱이 중단하고 자바스크립트 파일을 실행한다.
