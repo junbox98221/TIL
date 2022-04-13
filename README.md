@@ -84,6 +84,8 @@
 
 > [프로미스](/JavaScript/프로미스.md)
 
+> [이터러블](/JavaScript/이터러블.md)
+
 # 2. 브라우저
 
 > [defer,async스크립트](/브라우저/defer,async스크립트.md)
