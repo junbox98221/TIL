@@ -1,6 +1,6 @@
 # key
 
-> 출처 > 출처 [리액트를 다루는 기술](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9791160508796), [블로그][https://medium.com/sjk5766/react-%eb%b0%b0%ec%97%b4%ec%9d%98-index%eb%a5%bc-key%eb%a1%9c-%ec%93%b0%eb%a9%b4-%ec%95%88%eb%90%98%eb%8a%94-%ec%9d%b4%ec%9c%a0-3ce48b3a18fb]를 보고 정리한 내용입니다.
+> 출처 > 출처 [리액트를 다루는 기술](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9791160508796), [블로그](https://medium.com/sjk5766/react-%eb%b0%b0%ec%97%b4%ec%9d%98-index%eb%a5%bc-key%eb%a1%9c-%ec%93%b0%eb%a9%b4-%ec%95%88%eb%90%98%eb%8a%94-%ec%9d%b4%ec%9c%a0-3ce48b3a18fb)를 보고 정리한 내용입니다.
 
 개발을 하다 보면 종종 컴포넌트를 map 함수로 반복하여 렌더링하는 경우가 종종 생긴다.
 
