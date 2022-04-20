@@ -90,7 +90,11 @@
 
 > [제너레이터와async&await](/JavaScript/제너레이터와async&await.md)
 
-# 2. 브라우저
+# 2. TypeScript
+
+> [tsconfig](/TypeScript/tsconfig.md)
+
+# 3. 브라우저
 
 > [defer,async스크립트](/브라우저/defer,async스크립트.md)
 
@@ -106,7 +110,7 @@
 
 > [RESTAPI](/브라우저/RESTAPI.md)
 
-# 3. React
+# 4. React
 
 > [VirtualDom](/React/VirtualDom.md)
 
