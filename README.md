@@ -94,6 +94,8 @@
 
 > [tsconfig](/TypeScript/tsconfig.md)
 
+> [코드생성과타입의독립성](/TypeScript/코드생성과타입의독립성.md)
+
 # 3. 브라우저
 
 > [defer,async스크립트](/브라우저/defer,async스크립트.md)
