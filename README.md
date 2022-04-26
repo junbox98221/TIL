@@ -96,6 +96,8 @@
 
 > [코드생성과 타입의 독립성](/TypeScript/코드생성과타입의독립성.md)
 
+> [any 타입 지양하기](/TypeScript/any타입지양하기.md)
+
 # 3. 브라우저
 
 > [defer,async 스크립트](/브라우저/defer,async스크립트.md)
