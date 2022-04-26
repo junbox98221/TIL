@@ -20,11 +20,11 @@
 
 > [함수](/JavaScript/함수.md)
 
-> [화살표함수](/JavaScript/화살표함수.md)
+> [화살표 함수](/JavaScript/화살표함수.md)
 
 > [객체](/JavaScript/객체.md)
 
-> [가비지컬렉션](/JavaScript/가비지컬렉션.md)
+> [가비지 컬렉션](/JavaScript/가비지컬렉션.md)
 
 > [메서드와 this](/JavaScript/메서드&this.md)
 
@@ -34,7 +34,7 @@
 
 > [심볼](/JavaScript/심볼.md)
 
-> [원시값메서드](/JavaScript/원시값메서드.md)
+> [원시값 메서드](/JavaScript/원시값메서드.md)
 
 > [숫자형](/JavaScript/숫자형.md)
 
@@ -56,7 +56,7 @@
 
 > [call/apply&데코레이터,포워딩](/JavaScript/call/apply&데코레이터,포워딩.md)
 
-> [함수바인딩](/JavaScript/함수바인딩.md)
+> [함수 바인딩](/JavaScript/함수바인딩.md)
 
 > [프로토타입](/JavaScript/프로토타입.md)
 
@@ -66,9 +66,9 @@
 
 > [스코프](/JavaScript/스코프.md)
 
-> [프로퍼티어트리뷰트](/JavaScript/프로퍼티어트리뷰트.md)
+> [프로퍼티 어트리뷰트](/JavaScript/프로퍼티어트리뷰트.md)
 
-> [함수와일급객체](/JavaScript/함수와일급객체.md)
+> [함수와 일급객체](/JavaScript/함수와일급객체.md)
 
 > [빌트인객체](/JavaScript/빌트인객체.md)
 
@@ -94,11 +94,11 @@
 
 > [tsconfig](/TypeScript/tsconfig.md)
 
-> [코드생성과타입의독립성](/TypeScript/코드생성과타입의독립성.md)
+> [코드생성과 타입의 독립성](/TypeScript/코드생성과타입의독립성.md)
 
 # 3. 브라우저
 
-> [defer,async스크립트](/브라우저/defer,async스크립트.md)
+> [defer,async 스크립트](/브라우저/defer,async스크립트.md)
 
 > [렌더링](/브라우저/렌더링.md)
 
@@ -106,7 +106,7 @@
 
 > [이벤트](/브라우저/이벤트.md)
 
-> [비동기프로그래밍](/브라우저/비동기프로그래밍.md)
+> [비동기 프로그래밍](/브라우저/비동기프로그래밍.md)
 
 > [Ajax](/브라우저/Ajax.md)
 
@@ -122,6 +122,6 @@
 
 > [key](/React/key.md)
 
-> [라이프사이클](/React/라이프사이클.md)
+> [라이프 사이클](/React/라이프사이클.md)
 
 > [hook](/React/hook.md)
