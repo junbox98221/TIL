@@ -98,6 +98,8 @@
 
 > [any 타입 지양하기](/TypeScript/any타입지양하기.md)
 
+> [타입이 값들의 집합이라고 생각하기](/TypeScript/타입은값의집합.md)
+
 # 3. 브라우저
 
 > [defer,async 스크립트](/브라우저/defer,async스크립트.md)
