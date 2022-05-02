@@ -100,6 +100,8 @@
 
 > [타입이 값들의 집합이라고 생각하기](/TypeScript/타입은값의집합.md)
 
+> [제네릭](/TypeScript/제네릭.md)
+
 # 3. 브라우저
 
 > [defer,async 스크립트](/브라우저/defer,async스크립트.md)
