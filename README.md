@@ -104,6 +104,8 @@
 
 > [제네릭](/TypeScript/제네릭.md)
 
+> [타입 단언보다는 타입 선언 사용하기](/TypeScript/타입단언보단타입선언.md)
+
 # 3. 브라우저
 
 > [defer,async 스크립트](/브라우저/defer,async스크립트.md)
