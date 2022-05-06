@@ -106,6 +106,8 @@
 
 > [타입 단언보다는 타입 선언 사용하기](/TypeScript/타입단언보단타입선언.md)
 
+> [객체래퍼타입피하기](/TypeScript/객체래퍼타입피하기.md)
+
 # 3. 브라우저
 
 > [defer,async 스크립트](/브라우저/defer,async스크립트.md)
