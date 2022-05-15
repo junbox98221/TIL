@@ -130,6 +130,8 @@
 
 > [RESTAPI](/브라우저/RESTAPI.md)
 
+> [CORS](/브라우저/CORS.md)
+
 # 4. React
 
 > [VirtualDom](/React/VirtualDom.md)
