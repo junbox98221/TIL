@@ -11,6 +11,18 @@ redux-saga를 사용하는 이유는 다음과 같은 까다로운 상황에 유
 -   웹소켓을 사용할 때
 -   api 요청이 실패한 경우 재요청할 때
 
+redux-saga는 제너레이터 문법을 사용한다. saga는 generator function을 뜻하는데 saga를 만들어 redux-saga 미들웨어에 등록하면 이 미들웨어가 generator function으로부터 만들어진 generator를 계속 실행하여 산출된 모든 effect를 실행한다.
+
+즉 saga는 yield 값만을 반환하고 미들웨어가 이 값(effect)를 받아서 실행하는 역할을 나눠서 한다.
+
+---
+
+### effect
+
+effect란 saga가 반환하는 값이자 미들웨어가 실행할 명령을 담고 있는 자바스크립트 객체이다.
+
+정리하자면 saga는 명령을 담고 있는, 이펙트라 부르는 순수한 객체를 yield하고 미들웨어는 이런 명령들을 해석해 처리하고 결과를 다시 saga에 돌려준다.
+
 redux-thunk를 사용할 때와 마찬가지로 스토어에 redux-saga 미들웨어를 적용한다.
 
 ```js
