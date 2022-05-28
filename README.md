@@ -157,3 +157,5 @@
 > [redux-thunk](/React/redux-thunk.md)
 
 > [redux-saga](/React/redux-saga.md)
+
+> [sideEffect](/React/sideEffect.md)
