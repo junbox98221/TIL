@@ -132,6 +132,8 @@
 
 > [CORS](/브라우저/CORS.md)
 
+> [HTTP](/CS/HTTP.md)
+
 # 4. React
 
 > [VirtualDom](/React/VirtualDom.md)
@@ -167,5 +169,3 @@
 # 6. CS
 
 > [프로세스&스레드](/CS/프로세스&스레드.md)
-
-> [HTTP](/CS/HTTP.md)
