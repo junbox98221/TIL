@@ -132,7 +132,9 @@
 
 > [CORS](/브라우저/CORS.md)
 
-> [HTTP](/CS/HTTP.md)
+> [HTTP](/브라우저/HTTP.md)
+
+> [쿠키&세션](/브라우저/쿠키&세션.md)
 
 # 4. React
 
