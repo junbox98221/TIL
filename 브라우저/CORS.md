@@ -1,7 +1,5 @@
 # CORS
 
-> 출처 Modern JavaScript Deep Dive를 보고 정리한 내용입니다.
-
 CORS(Cross Origin Resource Sharing)은 우리가 가져오는 리소스들이 안전한지 검사하는 관문이다.
 
 이는 HTTP 요청에 대해서 어떤 요청을 하느냐에 따라 다른 특징을 갖기 때문이다.
