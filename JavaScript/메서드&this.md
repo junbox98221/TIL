@@ -83,6 +83,21 @@ user.f(); // John  (this == user)
 admin.f(); // Admin  (this == admin)
 ```
 
+## this 바인딩
+
+1. 객체 리터럴의 메서드 내부에서 this는 메서드를 호출한 객체를 가르킨다.
+
+```js
+const circle = {
+    radius: 5,
+    getDiamter() {
+        return 2 * this.radius;
+    },
+};
+```
+
+2. 생성자 함수 내부에서 this는 생성자 함수가 생성할 인스턴스를 가리킨다.
+
 아래는 프로토타입과 관련된 this 바인딩의 예시이다.
 
 ```js
@@ -118,3 +133,14 @@ const circle2 = new Circle(10);
 console.log(circle1.getDiamter()); //10
 console.log(circle2.getDiamter()); //20
 ```
+
+전역에서는 전역 객체 window를 가리킨다.
+
+```js
+console.log(this); // window
+```
+
+정리
+
+-   this 란 : 객체 혹은 인스턴스 안에서 메서드가 자신이 속한 객체,인스턴스의 프로퍼티를 참조할 때 사용하는 자신이 속한 객체를 가리키는 식별자인 자기 참조 변수이다.
+-   this 바인딩 : 자바스크립트의 this는 함수가 호출되는 방식에 따라 this에 바인딩되는 값이 동적으로 결정된다.
