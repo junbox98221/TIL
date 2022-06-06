@@ -4,14 +4,14 @@
 
 객체의 프로퍼티에 함수를 할당할 수 있는데 할당된 함수는 메서드라고 한다.
 
-```
+```js
 let user = {
-  name: "John",
-  age: 30
+    name: "John",
+    age: 30,
 };
 
-user.sayHi = function() {
-  alert("안녕하세요!");
+user.sayHi = function () {
+    alert("안녕하세요!");
 };
 
 user.sayHi(); // 안녕하세요!
@@ -21,16 +21,15 @@ user.sayHi(); // 안녕하세요!
 
 아래 방식으로 접근한다.
 
-```
+```js
 let user = {
-  name: "John",
-  age: 30,
+    name: "John",
+    age: 30,
 
-  sayHi() {
-    // 'this'는 '현재 객체'를 나타냅니다.
-    alert(this.name);
-  }
-
+    sayHi() {
+        // 'this'는 '현재 객체'를 나타냅니다.
+        alert(this.name);
+    },
 };
 
 user.sayHi(); // John
@@ -88,15 +87,58 @@ admin.f(); // Admin  (this == admin)
 1. 객체 리터럴의 메서드 내부에서 this는 메서드를 호출한 객체를 가르킨다.
 
 ```js
-const circle = {
-    radius: 5,
-    getDiamter() {
-        return 2 * this.radius;
+const person = {
+    name: "Lee",
+    getName() {
+        return this.name;
     },
 };
 ```
 
+위 예시에서 getName 프로퍼티가 가리키는 함수 객체는 person 객체에 포함된 것이 아니라 독립적으로 존재하는 별도의 객체이다.
+
+이를 유념하면서 아래 예시도 보자.
+
+```js
+const person = {
+    name: "Lee",
+    getName() {
+        return this.name;
+    },
+};
+
+const anotherPerson = {
+    name: "Kim",
+};
+
+anotherPerson.getName = person.getName;
+
+console.log(anotherPerson.getName()); // Kim
+
+const getName = person.getName;
+
+console.log(getName()); // ''
+```
+
+메서드 내부의 this는 프로퍼티로 메서드를 가리키고 있는 객체와는 관계가 없고 메서드를 호출한 객체에 바인딩된다.
+
 2. 생성자 함수 내부에서 this는 생성자 함수가 생성할 인스턴스를 가리킨다.
+
+```js
+function Circle(radius) {
+    this.radius = radius;
+    this.getDiameter = function () {
+        return 2 * this.radius;
+    };
+}
+
+const circle1 = new Circle(5);
+
+const circle2 = new Circle(10);
+
+console.log(circle1.getDiamter()); //10
+console.log(circle2.getDiamter()); //20
+```
 
 아래는 프로토타입과 관련된 this 바인딩의 예시이다.
 
@@ -116,28 +158,92 @@ Person.prototype.name = "Kim";
 console.log(Person.prototype.getName()); //Person.prototype 또한 하나의 객체로 여기서 getName는 Kim을 호출한다.
 ```
 
-생성자 함수 내부의 this는 생성자 함수가 미래에 생성할 인스턴스를 가르킨다.
+3. 일반 함수와 전역에서의 this는 전역 객체 window를 가리킨다.
 
 ```js
-function Circle(radius) {
-    this.radius = radius;
-    this.getDiameter = function () {
-        return 2 * this.radius;
-    };
+function foo() {
+    console.log("foo's this: ", this);
+    function bar() {
+        console.log("bar's this: ", this);
+    }
+    bar();
 }
-
-const circle1 = new Circle(5);
-
-const circle2 = new Circle(10);
-
-console.log(circle1.getDiamter()); //10
-console.log(circle2.getDiamter()); //20
+foo();
 ```
-
-전역에서는 전역 객체 window를 가리킨다.
 
 ```js
 console.log(this); // window
+```
+
+콜백 함수 내부에서 호출된 일반 함수 또한 this에 window가 바인딩된다.
+
+```js
+const value = 1;
+
+const obj = {
+    value: 100,
+    foo() {
+        console.log("foo's this: ", this); // {value: 100 , foo : f}
+
+        setTimeout(function () {
+            console.log("callback's this : ", this); // window
+            console.log("callback's this.value : ", this); // 1
+        }, 100);
+    },
+};
+```
+
+메서드 내부의 중첩 함수나 콜백 함수의 this 바인딩을 메서드의 this 바인딩과 일치시키기 위해서 여러 방법이 존재한다.
+
+1. this 바인딩을 변수에 할당하기
+
+```js
+var value = 1;
+
+const obj = {
+    value: 100,
+    foo() {
+        const that = this;
+        setTimeout(function () {
+            console.log(this.value); // 100
+        }, 100);
+    },
+};
+```
+
+2. Function.prototype.apply, call, bind 메서드 사용하기
+
+```js
+var value = 1;
+
+const obj = {
+    value: 100,
+    foo() {
+        const that = this;
+        setTimeout(
+            function () {
+                console.log(this.value); // 100
+            }.bind(this),
+            100
+        );
+    },
+};
+```
+
+3. 화살표 함수 사용하기
+
+```js
+var value = 1;
+
+const obj = {
+    value: 100,
+    foo() {
+        const that = this;
+        setTimeout(() => {
+            console.log(this.value); // 100
+        }, 100);
+    },
+};
 ```
 
 정리
