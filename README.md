@@ -48,6 +48,8 @@
 
 > [구조분해할당](/JavaScript/구조분해할당.md)
 
+> [생성자함수](/JavaScript/생성자함수.md)
+
 > [실행컨텍스트](/JavaScript/실행컨텍스트.md)
 
 > [매개변수&스프레드](/JavaScript/매개변수&스프레드.md)
