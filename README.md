@@ -92,6 +92,8 @@
 
 > [제너레이터와async&await](/JavaScript/제너레이터와async&await.md)
 
+> [babel](/JavaScript/babel.md)
+
 # 2. TypeScript
 
 > [tsconfig](/TypeScript/tsconfig.md)
