@@ -168,6 +168,8 @@
 
 > [sideEffect](/React/sideEffect.md)
 
+> [코드스플리팅](/React/코드스플리팅.md)
+
 # 5. CSS
 
 > [display](/CSS/display.md)
