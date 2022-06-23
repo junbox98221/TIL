@@ -94,6 +94,8 @@
 
 > [babel](/JavaScript/babel.md)
 
+> [dataFetching](/JavaScript/dataFetching.md)
+
 # 2. TypeScript
 
 > [tsconfig](/TypeScript/tsconfig.md)
