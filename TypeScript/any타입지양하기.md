@@ -25,7 +25,7 @@ age += 1; // 런타임에 정상 age = 121
 아래 birthDate 매개변수는 string이 아닌 Date 타입이어야 한다. any 타입을 사용하면 calculateAge의 시그니처를 무시하게 된다.
 
 ```ts
-function calculateAge(bitthDate:Date) number{
+function calculateAge(birthDate:Date) number{
 
 }
 
@@ -48,7 +48,7 @@ calculateAge(birthDate); // 정상
 
 ---
 
-### any는 타입 설게를 감춘다.
+### any는 타입 설계를 감춘다.
 
 애플리케이션 상태 같은 객체를 정의하려면 상태 객체 안에 있는 수많은 속성의 타입을 일일이 작성해야 한다.
 
