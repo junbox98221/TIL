@@ -176,6 +176,8 @@
 
 > [jsx](/React/jsx.md)
 
+> [렌더링 최적화를 위한 트릭](/React/렌더링최적화트릭.md)
+
 # 5. CSS
 
 > [display](/CSS/display.md)
