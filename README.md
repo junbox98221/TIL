@@ -96,6 +96,8 @@
 
 > [dataFetching](/JavaScript/dataFetching.md)
 
+> [웹컴포넌트](/JavaScript/웹컴포넌트.md)
+
 # 2. TypeScript
 
 > [tsconfig](/TypeScript/tsconfig.md)
