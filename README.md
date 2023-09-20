@@ -219,3 +219,8 @@
 # 11. NEXTJS
 
 > [routing](/nextjs/routing.md)
+
+# 12. 웹 성능 개선
+
+- ## Performance
+  - > [text compression](/웹성능개선/performance/textCompression.md)
